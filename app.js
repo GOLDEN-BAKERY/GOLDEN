@@ -14,9 +14,16 @@ app.use(express.static('img'));
 app.get('/', (req, res) => {
     res.render('index', { title: 'Golden Bakery Shop' });
 });
+//Sobre Nosotros
 app.get('/sobreNosotros', (req, res) => {
     res.render('sobreNosotros', { title: 'Sobre Nosotros' });
 });
+//Productos
+app.get('/productos', (req, res) => {
+    res.render('productos', { title: 'Productos' });
+});
+
+
 
 
 app.listen(process.env.PORT, () => {
