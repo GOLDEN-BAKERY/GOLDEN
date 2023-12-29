@@ -34,6 +34,11 @@ app.get('/iniciar', (req, res) => {
 app.get('/crearCuenta', (req, res) => {
     res.render('crearCuenta', { title: 'Crear Cuenta' });
 });
+//Recuperar contraseña
+app.get('/reset-password', (req, res) => {
+    res.render('reset-password', { title: 'Recuperar Contraseña' });
+});
+
 
 
 
