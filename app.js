@@ -26,6 +26,14 @@ app.get('/productos', (req, res) => {
 app.get('/contacto', (req, res) => {
     res.render('contacto', { title: 'Contacto' });
 });
+//Iniciar sesión
+app.get('/iniciar', (req, res) => {
+    res.render('iniciar', { title: 'Iniciar Sesión' });
+});
+//Crear Cuenta
+app.get('/crearCuenta', (req, res) => {
+    res.render('crearCuenta', { title: 'Crear Cuenta' });
+});
 
 
 

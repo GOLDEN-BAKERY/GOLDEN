@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Golden Bakery Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded shadow-md w-full max-w-lg"> <!-- Cambié max-w-sm a max-w-lg para un formulario más ancho -->
+        <h2 class="text-2xl font-bold mb-6 text-center">Crear Cuenta</h2>
+        <form action="/login" method="POST">
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-semibold mb-2">Nombre Completo</label>
+                <input type="text" id="name" name="name" required class="border px-4 py-2 w-full rounded">
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-semibold mb-2">Correo Electrónico</label>
+                <input type="email" id="email" name="email" required class="border px-4 py-2 w-full rounded">
+            </div>
+            <div class="mb-4">
+                <label for="phone" class="block text-sm font-semibold mb-2">Número de Teléfono</label>
+                <input type="tel" id="phone" name="phone" required class="border px-4 py-2 w-full rounded">
+            </div>
+            <div class="mb-6">
+                <label for="password" class="block text-sm font-semibold mb-2">Contraseña</label>
+                <input type="password" id="password" name="password" required class="border px-4 py-2 w-full rounded">
+            </div>
+        </form>
+        <div class="flex items-center justify-between">
+            <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 w-full">Registrarse</button>
+        </div>
+
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="/" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500">Pagina Principal</a>
+        </div>
+
+        <div id="logoGolden" class="flex justify-center items-end pb-4 mt-6">
+            <img src="GOLDEN_logo.jpg" alt="Logo de Golden Bakery Shop" class="h-16 w-auto">
+        </div>
+
+       
+    </div>
+</body>
+</html>
