@@ -22,6 +22,10 @@ app.get('/sobreNosotros', (req, res) => {
 app.get('/productos', (req, res) => {
     res.render('productos', { title: 'Productos' });
 });
+//Contacto
+app.get('/contacto', (req, res) => {
+    res.render('contacto', { title: 'Contacto' });
+});
 
 
 
