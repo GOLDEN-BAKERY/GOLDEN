@@ -3,44 +3,18 @@ require('dotenv').config();
 const express = require('express')
 const app = express()
 
+
+
+//Rutas
+app.use(require('./routes/web.routes'))
+
 //Configurar Pug como motor de plantillas
 app.set('view engine', 'pug');
 app.set('views', './views')
 
-//
+
 app.use( express.static('img'));
 app.use(express.static('public'));
-
-//Servir Plantillas Pug desde Servidor Express:
-app.get('/', (req, res) => {
-    res.render('index', { title: 'Golden Bakery Shop' });
-});
-//Sobre Nosotros
-app.get('/sobreNosotros', (req, res) => {
-    res.render('sobreNosotros', { title: 'Sobre Nosotros' });
-});
-//Productos
-app.get('/productos', (req, res) => {
-    res.render('productos', { title: 'Productos' });
-});
-//Contacto
-app.get('/contacto', (req, res) => {
-    res.render('contacto', { title: 'Contacto' });
-});
-//Iniciar sesión
-app.get('/iniciar', (req, res) => {
-    res.render('iniciar', { title: 'Iniciar Sesión' });
-});
-//Crear Cuenta
-app.get('/crearCuenta', (req, res) => {
-    res.render('crearCuenta', { title: 'Crear Cuenta' });
-});
-//Recuperar contraseña
-app.get('/reset-password', (req, res) => {
-    res.render('reset-password', { title: 'Recuperar Contraseña' });
-});
-
-
 
 
 
