@@ -8,7 +8,8 @@ app.set('view engine', 'pug');
 app.set('views', './views')
 
 //
-app.use(express.static('img'));
+app.use( express.static('img'));
+app.use(express.static('public'));
 
 //Servir Plantillas Pug desde Servidor Express:
 app.get('/', (req, res) => {
