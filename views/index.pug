@@ -8,7 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-
 </head>
 
 <body class="bg-black text-white">
@@ -31,17 +30,30 @@
                 <p class="mt-6 text-lg leading-8  text-dark-gold font-playfair">Descubre la variedad de nuestros productos artesanales, hechos con amor y dedicación.</p>
                 <div class="mt-10 flex items-center justify-center gap-x-6">
                     <a href="/productos" class="rounded-md bg-yellow-400 px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-yellow-500">Explorar Productos</a>
-
                 </div>
             </div>
         </div>
     </div>
 
-    <div id=logoGolden class=" fixed inset-x-0 bottom-0 flex justify-center items-end pb-4">
-        <img src="GOLDEN_logo.jpg" alt="Logo de Golden Bakery Shop" class="h-64 w-auto border-4  border-dark-gold">
+    <!-- Contenedor Principal para Flex -->
+    <div class="fixed inset-x-0 bottom-0 flex justify-around items-end pb-4 z-50">
+        <!-- Div 1 -->
+        <div id="div1" class="flex-1"> <!-- Ajusta el color y el tamaño según necesites -->
+            <!-- Contenido de Div 1 -->
+            <img src="golden-logo4-1copia.png" alt="Logo de Golden Bakery Shop" class="h-100  w-auto mx-auto">
+        </div>
+
+        <!-- Logo Golden en el centro -->
+        <div id="logoGolden" class="flex-1">
+            <img src="GOLDEN_logo.jpg" alt="Logo de Golden Bakery Shop" class="h-64 w-auto mx-auto">
+        </div>
+
+        <!-- Div 2 -->
+        <div id="div2" class="flex-1"> <!-- Ajusta el color y el tamaño según necesites -->
+            <!-- Contenido de Div 2 -->
+            <img src="golden-logo4-1.png" alt="Logo de Golden Bakery Shop" class="h-100  w-auto mx-auto">
+        </div>
     </div>
-    
-    
     
 </body>
 
