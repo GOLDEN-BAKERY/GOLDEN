@@ -2,8 +2,6 @@ const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/web.controllers')
 
-
-//Servir Plantillas Pug desde Servidor Express:
 //Index
 router.get('/', controller.index) 
 //Sobre Nosotros
@@ -11,7 +9,7 @@ router.get('/sobreNosotros', controller.sobreNosotros);
 //Productos
 router.get('/productos', controller.productos );
 //Contacto
-router.get('/contacto', controller.productos);
+router.get('/contacto', controller.contacto);
 //Iniciar sesión
 router.get('/iniciar', controller.iniciar);
 //Crear Cuenta
