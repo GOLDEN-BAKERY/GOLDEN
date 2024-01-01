@@ -8,22 +8,30 @@ html(lang="es")
     link(href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet")
     link(rel="stylesheet" href="styles.css")
   body(class="bg-black text-dark-gold")
-    div(class="container mx-auto px-6 py-12")
-      div(class="flex flex-col #{'lg:flex-row'} justify-between")
-        div(class="lg:w-1/2 text-lg #{'lg:text-left'} mb-6 #{'lg:mb-0'}")
-          h1(class="text-8xl font-bold mb-6 font-playfair text-dark-gold") Contacto
-          p(class="text-2xl mb-2 font-playfair") Rua Fernando Arenas Quintela, 3,
-          p(class="text-2xl mb-2 font-playfair") 15003 A Coruña (Plaza Santa Catalina)
-          p(class="text-2xl mb-2 font-playfair") De lunes a viernes de 10:00 a 14:00 y de 17:00 a 21:00
-          p(class="text-2xl mb-2 font-playfair") Sábado y Domingo de 10:00 a 14:00
-          p(class="text-2xl mb-2 font-playfair font-semibold") +34 608095313
-          p(class="text-2xl mb-2 font-playfair") goldenbakeryshop23@gmail.com
-          a(href="https://www.instagram.com/goldenbakeryshop/" class="text-2xl block mt-4 font-playfair")
-            img(src="#" alt="Instagram" class="mx-auto #{'lg:mx-0'} h-10 w-10")
-          div(class="mt-10 flex items-center justify-center gap-x-6")
-            a(href="/" class="rounded-md bg-yellow-400 px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-yellow-500") Pagina Principal
-        div(id="direccion-mapa" class="lg:w-1/2 border-4 border-dark-gold")
-          img(src="direccion-mapa.png" alt="Imagen descriptiva" class="w-full h-auto")
 
+   div(class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-between items-center")
+    div(id="izquierdaArriba" class="flex-1 text-lg lg:text- bg-center mb-6 lg:mb-0 justify-center")
+       h1(class="text-8xl font-bold mb-6 font-playfair text-dark-gold") Contacto
+       p(class="text-2xl mb-2 font-playfair") Rua Fernando Arenas Quintela, 3,
+       p(class="text-2xl mb-2 font-playfair") 15003 A Coruña (Plaza Santa Catalina)
+       p(class="text-2xl mb-2 font-playfair") De lunes a viernes de 10:00 a 14:00 y de 17:00 a 21:00
+       p(class="text-2xl mb-2 font-playfair") Sábado y Domingo de 10:00 a 14:00
+       p(class="text-2xl mb-2 font-playfair font-semibold") +34 608095313
+       p(class="text-2xl mb-2 font-playfair") goldenbakeryshop23@gmail.com
+       a(href="https://www.instagram.com/goldenbakeryshop/" class="text-2xl block mt-4 font-playfair")
+        img(src="#" alt="Instagram" class="mx-auto #{'lg:mx-0'} h-10 w-10")
+    
+    div(id="derechaArriba" class="flex-1 flex justify-center")
+       img(src="goldenFinal.png" alt="Logo de Golden Bakery Shop" class="h-auto w-full lg:w-auto lg:max-w-md")
+      
+   div(class="containerMapa mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-between items-center")
+    div(id="derechaArribaMapa" class="flex-1 flex justify-center")
+       img(src="direccion-mapa.png" alt="img mapa tienda" class="border-4  border-dark-gold  h-auto w-full lg:w-auto lg:max-w-md")
+    div(id="izquierdaArribaMapa" class="flex-1 text-lg lg:text-left mb-6 lg:mb-0 ")
+      a(href="/" class="rounded-md bg-yellow-400 px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-yellow-500") Pagina Principal
+      
+    
+      
+  
 
 
