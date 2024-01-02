@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const Usuario = require('../models/ususario.model');
 const controller = require('../controllers/web.controllers')
 
 //Index
@@ -16,5 +17,9 @@ router.get('/iniciar', controller.iniciar);
 router.get('/crearCuenta', controller.crear);
 //Recuperar contraseña
 router.get('/reset-password', controller.resetPassword);
+
+
+//Peticiones POST
+router.post('/crearCuenta', controller.saveUsuario )
 
 module.exports = router

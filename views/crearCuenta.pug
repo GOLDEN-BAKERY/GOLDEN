@@ -12,16 +12,16 @@ html(lang="es")
     .bg-black.p-8.rounded.shadow-md.w-full.max-w-lg.border-4.border-dark-gold
       .bg-black.p-8.rounded.shadow-md.w-full.max-w-lg.mt-14
         h2.text-4xl.font-bold.mb-4.text-center.font-playfair.text-dark-gold Crear Cuenta
-      form(action="/login" method="POST")
+      form(action="/crearCuenta" method="POST")
         .mb-2.pt-4
           label(for="name" class="block text-lg font-semibold mb-2 font-playfair") Nombre Completo
-          input(type="text" id="name" name="name" required class="border-4 border-dark-gold  px-4 py-2 w-full rounded")
+          input(type="text" id="name" name="nombre" required class="border-4 border-dark-gold  px-4 py-2 w-full rounded")
         .mb-2.pt-2
           label(for="email" class="block text-lg font-semibold mb-2 font-playfair") Correo Electrónico
-          input(type="email" id="email" name="email" required class="border-4 border-dark-gold  px-4 py-2 w-full rounded")
+          input(type="email" id="email" name="correo" required class="border-4 border-dark-gold  px-4 py-2 w-full rounded")
         .mb-2.pt-2
           label(for="phone" class="block text-lg font-semibold mb-2 font-playfair") Número de Teléfono
-          input(type="tel" id="phone" name="phone" required class="border-4 border-dark-gold px-4 py-2 w-full rounded")
+          input(type="tel" id="phone" name="telefono" required class="border-4 border-dark-gold px-4 py-2 w-full rounded")
         .mb-4.pt-2
           label(for="password" class="block text-lg font-semibold mb-2 font-playfair") Contraseña
           input(type="password" id="password" name="password" required class="border-4 border-dark-gold px-4 py-2 w-full rounded")
