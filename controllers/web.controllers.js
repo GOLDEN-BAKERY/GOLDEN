@@ -47,7 +47,22 @@ controller.saveUsuario = async (req, res = response) => {
 };
 
 
+controller.existe = async (req, res) => {
+    try {
+        const { correo, password } = req.body;
+        const usuario = await Usuario.findOne({ correo });
+
+        if (correo && password === usuario.password) {
+            res.status(200).send('éxito');
+        } else {
+            res.status(401).send('usuario no existe o error de login');
+        }
+    } catch (error) {
+        res.status(500).send('Error en el servidor');
+    }
+};
+
+
 
 
 module.exports = controller
-

@@ -1,0 +1,27 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Golden Bakery Shop
+    link(href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="styles.css")
+body.bg-black.text-white
+ div(class="container mx-auto font-playfair sm:px-6 lg:px-8 rounded bg-golden -15 mt-10 shadow-lg  shadow-white")
+
+  header
+    nav(class="flex item-center justify-between p-6  ")
+
+      div(class="flex mt -10 items-center justify-between gap-x-6 order-2")
+
+        a(href="/iniciar" class="sm:px-3 sm:py-2 rounded border border-transparent text-dark-gold bg-black hover:bg-dark-gold hover:text-black  shadow-white") Iniciar Sesión
+
+      div(class="flex mt -10 items-center justify-between gap-x-6" )
+      
+        a(href="/sobreNosotros" class="sm:px-3 sm:py-2 rounded border border-transparent text-dark-gold bg-black hover:bg-dark-gold hover:text-black shadow-white") Sobre Nosotros
+
+        a(href="/contacto" class="sm:px-3 sm:py-2 rounded border border-transparent text-dark-gold bg-black hover:bg-dark-gold hover:text-black  shadow-white") Contacto
+
+
+ 

@@ -20,6 +20,8 @@ router.get('/reset-password', controller.resetPassword);
 
 
 //Peticiones POST
-router.post('/crearCuenta', controller.saveUsuario )
+router.post('/crearCuenta', controller.saveUsuario );
+router.post('/iniciar', controller.existe);
+
 
 module.exports = router
