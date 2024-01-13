@@ -1,7 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const Usuario = require('../models/ususario.model');
-const controller = require('../controllers/web.controllers')
+
+const { check } = require('express-validator');
+
+const controller = require('../controllers/web.controllers');
+const { validarCampos } = require('../middlewares/validar-campos');
 
 //Index
 router.get('/', controller.index) 
@@ -20,7 +23,13 @@ router.get('/reset-password', controller.resetPassword);
 
 
 //Peticiones POST
-router.post('/crearCuenta', controller.saveUsuario );
+router.post('/crearCuenta',
+[check('nombre', 'El nombre es obligatorio').not().isEmpty(),
+check('correo').isEmail().withMessage('Ingrese un correo electrónico válido'),
+check('telefono', 'El teléfono es obligatorio y debe seguir el formato correcto').matches(/^[0-9]{9}$/),
+check('password', 'El password debe ser más de 6 letras').isLength({ min: 6 }),
+validarCampos],
+controller.saveUsuario )
 router.post('/iniciar', controller.existe);
 
 

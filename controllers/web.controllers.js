@@ -1,5 +1,6 @@
-const { response } = require('express');
+const { response, request } = require('express');
 const bcryptjs = require('bcryptjs');
+
 
 const Usuario = require('../models/ususario.model');
 
@@ -39,8 +40,11 @@ controller.resetPassword = (req, res = response) => {
  /**********Peticiones Post**********/
 
 //Creación de Usuario y Guardado en Base de Datos
-controller.saveUsuario = async (req, res = response) => {
-     
+controller.saveUsuario = async (req = request, res = response) => {
+    
+   
+
+
     const body = req.body;
     const { password } = body;
 
@@ -57,6 +61,7 @@ controller.saveUsuario = async (req, res = response) => {
         res.status(500).json({ message: 'Error al crear el usuario', error });
     }
 };
+
 //Comprobacion de existtencia de cliente
 controller.existe = async (req, res) => {
     try {
