@@ -23,11 +23,13 @@ const UsuarioSchema = Schema({
     img:{
         type: String
     },
-    rol:{
+    rol: {
         type: String,
-        required: false,
-        enum:['ADMIN_ROLE', 'USER_ROLE']
-    },
+        required: true,
+        enum: ['ADMIN_ROLE', 'USER_ROLE', 'VENTAS_ROLE'],
+        default: 'USER_ROLE' // Establece USER_ROLE como valor predeterminado
+    }
+,
     estado:{
         type: Boolean,
         default: true

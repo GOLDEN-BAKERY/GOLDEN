@@ -42,9 +42,6 @@ controller.resetPassword = (req, res = response) => {
 //Creación de Usuario y Guardado en Base de Datos
 controller.saveUsuario = async (req = request, res = response) => {
     
-   
-
-
     const body = req.body;
     const { password } = body;
 
@@ -52,11 +49,13 @@ controller.saveUsuario = async (req = request, res = response) => {
         //Encriptar la contraseña
         const salt = bcryptjs.genSaltSync();
         body.password = bcryptjs.hashSync(password, salt);
-        
+
+       
         const usuario = new Usuario(body);
 
         await usuario.save();
         res.status(201).json(usuario);
+        
     } catch (error) {
         res.status(500).json({ message: 'Error al crear el usuario', error });
     }

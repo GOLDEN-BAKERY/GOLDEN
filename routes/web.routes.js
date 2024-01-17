@@ -1,10 +1,12 @@
 const express = require('express');
+const { check } = require('express-validator');
 const router = express.Router();
 
-const { check } = require('express-validator');
-
 const controller = require('../controllers/web.controllers');
+
 const { validarCampos } = require('../middlewares/validar-campos');
+const { esRoleValido, 
+        comprobarEmail } = require('../helpers/db-validators')
 
 //Index
 router.get('/', controller.index) 
@@ -28,8 +30,11 @@ router.post('/crearCuenta',
 check('correo').isEmail().withMessage('Ingrese un correo electrónico válido'),
 check('telefono', 'El teléfono es obligatorio y debe seguir el formato correcto').matches(/^[0-9]{9}$/),
 check('password', 'El password debe ser más de 6 letras').isLength({ min: 6 }),
+check('rol').optional().custom( esRoleValido ),
+check('correo').custom( comprobarEmail ) ,
 validarCampos],
 controller.saveUsuario )
+
 router.post('/iniciar', controller.existe);
 
 
